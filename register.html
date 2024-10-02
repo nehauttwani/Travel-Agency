@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>REGISTRATION</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/script.js"></script>
+  </head>
+  <body>
+    <header class="header"></header>
+    <div class="d-flex flex-column align-items-center">
+      <h2 style="color: #041441">REGISTER FOR YOUR NEXT ADVENTURE</h2>
+
+      <form
+        action=""
+        method=""
+        class="d-flex flex-column align-items-center"
+        id="registrationForm"
+        onsubmit="return confirmSubmit(this.event)"
+        onreset="return confirmReset()"
+      >
+        <div class="d-flex form-inputs flex-wrap-wrap justify-content-between">
+          <div class="form-column">
+            <div class="input-group">
+              <label for="name">Full Name:</label>
+              <input type="text" id="name" name="name" required />
+              <p class="field-desc">
+                Enter your full name as it appears on official documents.
+              </p>
+            </div>
+
+            <div class="input-group">
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" required pattern="^[^@]+@[^@]+\.[^@]+$" />
+              <p class="field-desc">
+                Enter a valid email address (e.g., example@domain.com).
+              </p>
+            </div>
+            <div class="input-group">
+              <label for="password">Password:</label>
+              <input type="password" id="password" name="password" required minlength="8" />
+              <p class="field-desc">
+                Password must be at least 8 characters long and include a number
+                and a special character.
+              </p>
+            </div>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required pattern="[0-9]{10}"/><br />
+
+            <label for="birthdate">Birthdate:</label>
+            <input
+              type="date"
+              id="birthdate"
+              name="birthdate"
+              required
+            /><br /><br />
+          </div>
+          <div class="form-column">
+            <label for="gender">Gender:</label><br />
+            <input type="radio" id="male" name="gender" value="Male" />
+            <label for="male">Male</label><br />
+            <input type="radio" id="female" name="gender" value="Female" />
+            <label for="female">Female</label><br />
+            <input type="radio" id="other" name="gender" value="Other" />
+            <label for="other">Other</label><br /><br />
+
+            <label for="destination">Preferred Destination:</label>
+            <select id="destination" name="destination">
+              <option value="India">Europe</option>
+              <option value="Canada">Asia</option>
+              <option value="North America">North America</option>
+              <option value="South America">South America</option>
+              <option value="Australia">Australia</option>
+              <option value="Africa">Africa</option></select
+            ><br /><br />
+
+            <label for="interests"
+              >What interests you? (Check all that apply):</label
+            ><br />
+            <input
+              type="checkbox"
+              id="beaches"
+              name="interests"
+              value="Beaches"
+            />
+            <label for="beaches">Beaches</label><br />
+            <input
+              type="checkbox"
+              id="mountains"
+              name="interests"
+              value="Mountains"
+            />
+            <label for="mountains">Mountains</label><br />
+            <input
+              type="checkbox"
+              id="city"
+              name="interests"
+              value="City Tours"
+            />
+            <label for="city">City Tours</label><br />
+            <input
+              type="checkbox"
+              id="adventure"
+              name="interests"
+              value="Adventure"
+            />
+            <label for="adventure">Adventure</label><br />
+          </div>
+        </div>
+        <br />
+        <div class="button-container">
+          <input type="submit" value="Register" />
+          <input
+            type="reset"
+            style="background-color: #041441c7"
+            value="Reset"
+          />
+        </div>
+      </form>
+    </div>
+    <br /><br />
+    <footer class="footer"></footer>
+  </body>
+</html>
